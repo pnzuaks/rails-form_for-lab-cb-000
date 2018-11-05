@@ -8,14 +8,14 @@ class SchoolClassesController < ApplicationController
 	end
 
 	def create
-	  @schoolClass = SchoolClass.new(student_params(:first_name, :last_name))
+	  @schoolClass = SchoolClass.new(school_class_params(:title, :room_number))
 	  @schoolClass.save
 	  redirect_to student_path(@schoolClass)
 	end
 
 	def update
 	  @schoolClass = SchoolClass.find(params[:id])
-	  @schoolClass.update(student_params(:title, :room_number))
+	  @schoolClass.update(school_class_params(:title, :room_number))
 	  redirect_to student_path(@schoolClass)
 	end
 
