@@ -29,7 +29,7 @@ class StudentsController < ApplicationController
 
 	private
 
-	def post_params(*args)
+	def student_params(*args)
 		params.require(:post).permit(*args)
 	end
 end
