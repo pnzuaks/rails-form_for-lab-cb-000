@@ -1,6 +1,6 @@
-class StudentsController < ApplicationController
+class SchoolClassesController < ApplicationController
 	def show
-		@student = Student.find(params[:id])
+		@schoolClass = Student.find(params[:id])
 	end
 
 	def new
